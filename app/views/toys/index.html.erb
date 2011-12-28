@@ -1,0 +1,7 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+<h1>Listing Toys</h1>
+
+<%= render :partial => 'list', :locals => {:toys => @toys,
+                                           :selected => nil,
+                                           :alternate_partial => 'toy'} %>
+<p><%= link_to 'New Toy', new_toy_path, :class => 'new', :remote => true %></p>

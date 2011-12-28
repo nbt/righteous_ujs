@@ -1,0 +1,25 @@
+<h1>Listing toys</h1>
+
+<table>
+  <tr>
+    <th>Sku</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @toys.each do |toy| %>
+  <tr>
+    <td><%= toy.sku %></td>
+    <td><%= toy.description %></td>
+    <td><%= link_to 'Show', toy %></td>
+    <td><%= link_to 'Edit', edit_toy_path(toy) %></td>
+    <td><%= link_to 'Destroy', toy, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Toy', new_toy_path %>

@@ -1,0 +1,11 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+<div class='row', id='<%= dom_id(toy) -%>'>
+  <div class='column'><%= toy.sku %></div>
+  <div class='column'><%= toy.description %></div>
+  <div class='column'>
+    <%= link_to 'Edit', edit_toy_path(toy), :class=>'edit_toy', :remote => true %>
+    <%= link_to 'Delete', delete_toy_path(toy), :remote => true %>
+  </div>
+  <div class='clear'></div>
+</div>
+  

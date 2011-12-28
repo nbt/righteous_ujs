@@ -1,0 +1,29 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+<%# ================================================================
+    list the toys.  if toy == selected, render using
+    selected_partial, otherwise render using toy partial.
+
+    locals: toys, selected, selected_partial
+    ================================================================ %>
+
+<div class='errors'>
+<%= render :partial => 'errors', :locals => {:toy => selected} -%>
+</div>
+
+<div class='table-div'>
+  <div class='header-div'>
+    <div class='column'>Sku</div>
+    <div class='column'>Description</div>
+    <div class='column'></div>
+  </div>
+  <div class='body-div'>
+    <% toys.each do |m| %>
+      <% partial = ((m == selected) ? selected_partial : 'toy') %>
+      <%= render :partial => partial, :locals => {:toy => m} %>
+    <% end %>
+    <% if selected && selected.new_record? %>
+      <%= render :partial => selected_partial, :locals => {:toy => selected} %>
+    <% end %>
+  </div>
+</div>
+

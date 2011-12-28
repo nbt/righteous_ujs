@@ -1,0 +1,7 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+
+<%# ask server to render error block %>
+<% content = escape_javascript(render :partial => 'errors', :locals => {:toy => @toy}) %>
+
+<%# insert error message in error div %>
+$(".errors").append("<%= content -%>");

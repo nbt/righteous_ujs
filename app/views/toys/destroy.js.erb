@@ -1,0 +1,16 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+
+<%# remove any error messages %>
+$("#error_explanation").remove()
+
+<%# restore the 'new' link %>
+$('.new').show();
+
+<%# remove the editing form %>
+$(".form").remove();
+
+<%# unhide the current row %>
+$(".row#toy_<%= @toy.id -%>").show();
+
+<%# remove the deleted row %>
+$(".row#toy_<%= @toy.id -%>").fadeOut();

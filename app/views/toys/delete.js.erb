@@ -1,0 +1,19 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+
+<%# remove any error messages %>
+$("#error_explanation").remove()
+
+<%# remove any extant input form %>
+$(".form").remove();
+
+<%# expose any hidden rows %>
+$(".row").show();
+
+<%# ask the server to generate a deletion form for this item %>
+<% content = escape_javascript(render :partial => 'delete', :locals => {:toy => @toy}) %>
+
+<%# hide the current row %>
+$(".row#toy_<%= @toy.id -%>").hide();
+
+<%# insert the deletion form after the current row %>
+$(".row#toy_<%= @toy.id -%>").after("<%= content -%>");

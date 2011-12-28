@@ -1,0 +1,11 @@
+<% Rails.logger.debug("=== in #{__FILE__}, toy = #{toy.inspect}, errors = #{toy.try(:errors).try(:inspect)}") %>
+<% if toy && toy.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(toy.errors.count, "error") %> prohibited this toy from being saved:</h2>
+    <ul>
+    <% toy.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+
+<%# remove any error messages %>
+$("#error_explanation").remove()
+
+<%# remove the input form %>
+$(".form").remove();
+
+<%# show the new link %>
+$('.new').show();
+
+<%# ask the server to render the new item %>
+<% content = escape_javascript(render(@toy)) %>
+
+<%# insert the rendered item at the end of the list %>
+$(".body-div").append("<%= content -%>");
+

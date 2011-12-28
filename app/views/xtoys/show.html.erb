@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sku:</b>
+  <%= @toy.sku %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @toy.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_toy_path(@toy) %> |
+<%= link_to 'Back', toys_path %>

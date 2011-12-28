@@ -1,0 +1,12 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+<div class="row form">
+  <%= form_for toy, :remote => true, :html => {:class => 'remote-form'} do |f| %>
+    <div class="column"><%= f.text_field :sku %></div>
+    <div class="column"><%= f.text_field :description %></div>
+    <div class="column">
+      <%= link_to 'Cancel', toys_path, :remote => true %>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+<div class='clear'></div>

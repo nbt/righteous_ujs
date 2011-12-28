@@ -1,0 +1,105 @@
+// Place all the styles related to the toys controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #def;
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-size: 14px;
+}
+a {
+  color: blue; 
+}
+a img {
+    border: none; 
+}
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; 
+}
+.hidden {
+  display: none; 
+}
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background: white;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px; 
+}
+#flash_notice,
+#flash_error,
+#flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0; 
+}
+#flash_notice {
+  background-color: #ccffcc;
+  border: solid 1px #66cc66; 
+}
+#flash_error,
+#flash_alert {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666; 
+}
+.fieldWithErrors {
+  display: inline; 
+}
+.error_messages {
+  width: 400px;
+  border: 2px solid #cf0000;
+  padding: 0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px; }
+  .error_messages h2 {
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #cc0000;
+    color: white; 
+}
+.error_messages p {
+    margin: 8px 10px; 
+}
+.error_messages ul {
+    margin: 0; 
+}
+.table-div .header-div {
+  font-weight: bold;
+  text-align: center; 
+}
+.table-div .column {
+  float: left;
+  height: 20px;
+  width: 230px; 
+}
+
+.table-div .body-div, .table-div .row {
+  clear: both; 
+}
+
+#error_explanation {
+  width: 450px;
+ border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+   margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  ul li {
+    font-size: 12px;
+    list-style: square; } }

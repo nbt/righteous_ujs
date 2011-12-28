@@ -1,0 +1,19 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+
+<%# remove any error messages %>
+$("#error_explanation").remove()
+
+<%# restore the 'new' link %>
+$('.new').show();
+
+<%# ask the server for the updated contents %>
+<% content = escape_javascript(render(@toy)) %>
+
+<%# replace the curent row with the editing form %>
+$(".row#toy_<%= @toy.id -%>").replaceWith("<%= content -%>")
+
+<%# remove the editing form %>
+$(".form").remove();
+
+<%# unhide the current row %>
+$(".row#toy_<%= @toy.id -%>").show();

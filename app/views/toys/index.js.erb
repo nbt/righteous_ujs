@@ -1,0 +1,11 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+
+<%# remove any error messages %>
+$("#error_explanation").remove()
+
+<%# remove any extant input form %>
+$(".form").remove();
+
+<%# expose any hidden rows %>
+$(".row").show();
+

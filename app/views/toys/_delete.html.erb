@@ -1,0 +1,16 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+<%# ================================================================
+    called from :delete only if javascript is disabled
+    ================================================================ %>
+<div class="row form">
+  <%= form_for(toy, :url => { :action => :destroy }, :html => { :method => :delete }) do |f| %>
+    <div class='column selected'><em><%= toy.sku %></em></div>
+    <div class='column selected'><em><%= toy.description %></em></div>
+    <div class='column selected'>
+      Delete this one?
+      <%= link_to 'Cancel', toys_path, :remote => true %>
+      <%= f.submit 'Yes &raquo;' %>
+    </div>
+  <% end %>
+</div>
+<div class='clear'></div>

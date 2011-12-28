@@ -1,0 +1,7 @@
+<% Rails.logger.debug("=== in #{__FILE__}") %>
+<h1>New Toy</h1>
+
+<%= render :partial => 'list', :locals => {:toys => @toys,
+                                           :selected => @toy,
+                                           :selected_partial => 'form'} %>
+
